@@ -33,6 +33,7 @@ paste into the README.md file of the repository.
 """
 
 # Library versions Source of truth
+FFMPEG_711 = {"version": "7.1.1", "release_date": "2025-03-03"}
 FFMPEG_71 = {"version": "7.1", "release_date": "2024-09-30"}
 FFMPEG_70 = {"version": "7.0", "release_date": "2024-04-05"}
 FFMPEG_61 = {"version": "6.1", "release_date": "2023-11-11"}
@@ -639,6 +640,22 @@ LIBRARIES = OrderedDict(
                     "download_link": f"https://github.com/Netflix/vmaf/archive/refs/tags/v{LIBVMAF['version']}.tar.gz",
                     "build_dir": "/tmp/vmaf",
                     "tarball_name": f"vmaf-v{LIBVMAF['version']}.tar.gz",
+                },
+            },
+        ),
+        (
+            "ffmpeg-7.1.1",
+            {
+                "link": "http://ffmpeg.org/",
+                "version": FFMPEG_711["version"],
+                "version_link": "http://ffmpeg.org/releases/",
+                "release_date": FFMPEG_711["release_date"],
+                "license_name": "GNU Lesser General Public License (LGPL) version 2.1",
+                "license_link": "https://ffmpeg.org/legal.html",
+                "build_info": {
+                    "download_link": f"https://ffmpeg.org/releases/ffmpeg-{FFMPEG_711['version']}.tar.bz2",
+                    "build_dir": "/tmp/ffmpeg",
+                    "tarball_name": f"ffmpeg-{FFMPEG_711['version']}.tar.bz2",
                 },
             },
         ),
